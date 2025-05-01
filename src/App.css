@@ -1,0 +1,163 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.header {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header h1 {
+  color: black;
+  letter-spacing: 10px;
+  text-align: center;
+
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  background: linear-gradient(45deg, #6be6ff00, #3dd8ff00);
+  color: white;
+  border-radius: 20px;
+  font-size: 1.5rem; 
+  letter-spacing: 2px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heading:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+
+
+.video, .video1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+
+.ticket {
+  background: linear-gradient(135deg, rgba(0, 255, 110, 0), rgba(0, 255, 110, 0)); 
+  backdrop-filter: blur(12px);
+  padding: 25px; 
+  margin: 30px auto;
+  max-width: 600px;
+  border-radius: 20px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.044); 
+  animation: fadeIn 1.2s ease-in-out; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.ticket:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.book {
+  font-size: 32px;
+  color: black;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+select, input {
+  height: 42px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgba(240, 248, 255, 0.4);
+  color: black;
+}
+
+button {
+  height: 48px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(7, 7, 33);
+  border: none;
+  box-shadow: 3px 3px 6px black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  select, input, button {
+    width: 90%;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
